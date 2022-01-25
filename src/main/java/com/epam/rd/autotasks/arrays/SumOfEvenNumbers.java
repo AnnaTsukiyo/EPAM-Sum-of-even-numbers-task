@@ -9,11 +9,16 @@ public class SumOfEvenNumbers {
     }
 
     private static int sum(int[] array) {
-        if (Objects.isNull(array)) {
-            return 0;
+        if(Objects.isNull(array)){return 0;}
+        int sumEvent = 0;
+        for (int i = 0; i < array.length; i++) {
+            if (array.length == 0) {
+                return 0;
+            }
+            if (array[i] % 2 == 0) {
+                sumEvent = sumEvent + array[i];
+            }
         }
-        if (Arrays.stream(array).allMatch(v -> Objects.isNull(v)) || Arrays.stream(array).allMatch(v -> v == 0)) {
-            return 0;
-        } else return Arrays.stream(array).filter(f -> f % 2 == 0).sum();
+        return sumEvent;
     }
 }
