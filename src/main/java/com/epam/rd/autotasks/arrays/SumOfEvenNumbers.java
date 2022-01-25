@@ -9,8 +9,16 @@ public class SumOfEvenNumbers {
     }
 
     private static int sum(int[] array) {
-        if (Arrays.stream(array).allMatch(v -> Objects.isNull(v)) || Arrays.stream(array).allMatch(v -> v == 0)) {
-            return 0;
-        } else return Arrays.stream(array).filter(f -> f % 2 == 0).sum();
+        int sumEven = 0;
+        for (int i = 0; i < array.length; i++) {
+            if (array.length == 0 || Objects.isNull(array[i])) {
+                return 0;
+            }
+        }
+        if (array[i] % 2 == 0) {
+            sumEven += array[i];
+        }
+
+        return sumEven;
     }
 }
