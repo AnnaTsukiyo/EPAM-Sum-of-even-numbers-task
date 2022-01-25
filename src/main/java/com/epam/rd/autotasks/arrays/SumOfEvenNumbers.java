@@ -9,12 +9,11 @@ public class SumOfEvenNumbers {
     }
 
     private static int sum(int[] array) {
-        if(Objects.isNull(array)){return 0;}
+        if (array == null || array.length == 0) {
+            return 0;
+        }
         int sumEvent = 0;
         for (int i = 0; i < array.length; i++) {
-            if (array.length == 0) {
-                return 0;
-            }
             if (array[i] % 2 == 0) {
                 sumEvent = sumEvent + array[i];
             }
