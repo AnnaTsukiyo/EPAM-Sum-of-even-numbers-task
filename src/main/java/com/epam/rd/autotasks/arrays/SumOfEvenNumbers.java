@@ -4,8 +4,7 @@ public class SumOfEvenNumbers {
     public static void main(String[] args) {
 
         int[] arrayOfNumbers = new int[]{-2, 10, 0, 5};
-        int result = SumOfEvenNumbers.sum(arrayOfNumbers);
-        System.out.println(result == 8); // true
+        sum(arrayOfNumbers);
     }
 
     private static int sum(int[] array) {
