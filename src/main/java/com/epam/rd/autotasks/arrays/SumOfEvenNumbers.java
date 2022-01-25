@@ -8,10 +8,9 @@ public class SumOfEvenNumbers {
         System.out.println(result == 8); // true
     }
 
-    public static int sum(int[] array) {
-        if (Arrays.stream(array).allMatch(v -> Objects.isNull(v))) {
-            int res = 0;
-            return res;
+    private static int sum(int[] array) {
+        if (Arrays.stream(array).allMatch(v -> Objects.isNull(v)) || Arrays.stream(array).allMatch(v -> v == 0)) {
+            return 0;
         } else return Arrays.stream(array).filter(f -> f % 2 == 0).sum();
     }
 }
