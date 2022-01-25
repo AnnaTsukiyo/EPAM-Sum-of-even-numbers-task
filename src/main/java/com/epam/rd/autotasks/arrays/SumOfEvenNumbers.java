@@ -14,11 +14,11 @@ public class SumOfEvenNumbers {
             if (array.length == 0 || Objects.isNull(array[i])) {
                 return 0;
             }
-        }
-        if (array[i] % 2 == 0) {
-            sumEven += array[i];
-        }
 
+            if (array[i] % 2 == 0) {
+                sumEven += array[i];
+            }
+        }
         return sumEven;
     }
 }
