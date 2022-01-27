@@ -4,10 +4,11 @@ public class SumOfEvenNumbers {
     public static void main(String[] args) {
 
         int[] arrayOfNumbers = new int[]{-2, 10, 0, 5};
-        sum(arrayOfNumbers);
+       int result = SumOfEvenNumbers.sum(arrayOfNumbers);
+        System.out.println(result==8);
     }
 
-    private static int sum(int[] array) {
+    private int sum(int[] array) {
         if (array == null || array.length == 0) {
             return 0;
         }
